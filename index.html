@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link
+      rel="stylesheet"
+      href="./assets/css/tablet.css"
+      media="screen and (min-width: 710px)"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/desktop.css"
+      media="screen and (min-width: 1024px)"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
@@ -16,40 +26,212 @@
     />
     <title>Hectop4 Portafolio - Inicio</title>
   </head>
+
   <body>
     <!-- Header + NavBars -->
-    <header>
-      <h1>Hectop4 - Portfolio</h1>
+    <header class="nav-container">
+      <h1>Hectop4 <span>Portfolio</span></h1>
       <nav class="nav">
-        <div class="main-items-navbar">
-          <span class="material-symbols-outlined"> home </span>
-          <span class="material-symbols-outlined"> school </span>
-          <span class="material-symbols-outlined"> note </span>
-          <span class="material-symbols-outlined"> person </span>
-        </div>
-        <span class="material-symbols-outlined" id="list-item-navbar">
-          menu
-        </span>
+        <ul class="main-items-navbar">
+          <li>
+            <a href=""><span class="material-symbols-outlined"> home </span></a>
+          </li>
+          <li>
+            <a href="">
+              <span class="material-symbols-outlined"> school </span>
+            </a>
+          </li>
+          <li>
+            <a href=""><span class="material-symbols-outlined"> note </span></a>
+          </li>
+          <li>
+            <a href=""
+              ><span class="material-symbols-outlined"> person </span></a
+            >
+          </li>
+        </ul>
+        <a href="">
+          <span class="material-symbols-outlined" id="list-item-navbar">
+            menu
+          </span>
+        </a>
       </nav>
     </header>
     <!-- Main -->
     <main>
-      <aside class="info-container">
-        <img src="./assets/img/portfolio-cv.jpg" alt="" />
-        <h2>Hector Puentes</h2>
+      <section class="aboutme-container">
+        <h1>Who Am I?</h1>
+        <div class="image-container">
+          <img src="./assets/img/portfolio-cv.jpg" alt="Who Am I?" />
+        </div>
+        <div class="text-container">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            voluptatum, quibusdam, voluptates, quia voluptate quod quos
+            voluptatibus quas doloribus quidem voluptatem? Quisquam voluptatum,
+            quibusdam, voluptates, quia voluptate quod quos voluptatibus quas
+            doloribus quidem voluptatem?
+          </p>
+        </div>
+        <div class="cv-download">
+          <a href=""><button>Download CV</button></a>
+        </div>
+        <div class="social-media-container">
+          <div class="email-container">
+            <div class="email-box">
+              <p>Email: example@example.com</p>
+              <button onclick="">
+                <span class="material-symbols-outlined">content_copy</span>
+              </button>
+            </div>
+          </div>
+          <ul class="social-media-img">
+            <li>
+              <a href=""
+                ><img src="./assets/img/social/tiktok.png" alt="Tik tok"
+              /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img src="./assets/img/social/instagram.png" alt="Instagram"
+              /></a>
+            </li>
+            <li>
+              <a href=""><img src="./assets/img/social/x.png" alt="x" /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img src="./assets/img/social/linkedin.png" alt="Linkedin"
+              /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img src="./assets/img/social/github.png" alt="Github"
+              /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img src="./assets/img/social/youtube.png" alt="Youtube"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-        <div class="info-container__social-media">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum consectetur odit maxime natus reprehenderit. Veritatis, deleniti ratione, hic repellat quos pariatur alias illum ut explicabo quis quod similique iusto optio!
-          Cum recusandae laborum iusto id quisquam, perferendis suscipit, atque unde similique ipsam doloremque eveniet eius laboriosam architecto corporis non! Blanditiis, et adipisci! Natus fuga facere nostrum eaque doloremque quasi asperiores.
-          Rem perferendis officiis et repellendus atque similique maxime sequi fugiat, eaque quibusdam iusto unde cupiditate harum nulla, expedita labore explicabo minima repellat sint fuga ea consequatur. Consectetur accusantium dolor ipsum?
-          Odit, asperiores dolorem? Ut nisi, fugit at ipsum dolorum libero consectetur exercitationem accusamus error veniam velit, voluptatem animi magnam in molestiae? Dolores enim iste error sapiente. Provident tempore iusto maiores!
-          Voluptate mollitia perspiciatis enim omnis placeat rerum quae earum aspernatur molestias dolor aliquam blanditiis a odit laboriosam, deleniti laborum. Neque quos commodi architecto, animi nam ex laudantium ea quia quisquam?
-          Quae blanditiis, itaque mollitia maxime corporis alias quam, enim tenetur sint aspernatur, eius laborum perspiciatis eligendi cum! Ipsa ratione adipisci neque laborum tenetur unde facilis vel voluptate. Nemo, hic nesciunt.
-          Optio quos vel alias maxime pariatur ipsum officiis nemo! Optio, nihil suscipit quaerat id illum consectetur totam cum dolorem nesciunt odit. Sint, accusamus consequatur. Incidunt aspernatur qui dolore sit blanditiis.
-          Quod officiis maxime architecto quas obcaecati et esse molestias rem tempore odit aliquam vitae omnis cupiditate voluptatibus veniam beatae minima ratione blanditiis delectus, numquam iste animi nobis! Eius, perferendis. Reprehenderit?
-          Rem mollitia repellat laboriosam labore minus, veniam odio ipsa laudantium soluta quod est iste tempora obcaecati velit quia! Ratione necessitatibus quia ipsa tenetur animi similique at vel quod dicta deserunt.
-          Asperiores numquam magni officia, inventore eveniet perspiciatis consequatur vero. Quis facilis assumenda quidem molestias, eum sunt, eligendi facere laboriosam suscipit corrupti non necessitatibus, fugiat consequatur aperiam nulla! Omnis, voluptatem necessitatibus?</p>
-      </aside>
+      <section class="skills-container">
+        <h2>Skills</h2>
+        <ul class="skills">
+          <li class="skill">
+            <img src="./assets/img/skills/html5.png" alt="HTML5" />
+            <p>HTML5</p>
+          </li>
+          <li class="skill">
+            <img src="./assets/img/skills/css3.png" alt="CSS3" />
+            <p>CSS3</p>
+          </li>
+          <li class="skill">
+            <img src="./assets/img/skills/javascript.png" alt="JavaScript" />
+            <p>JavaScript</p>
+          </li>
+          <li class="skill">
+            <img src="./assets/img/skills/python.png" alt="PHP" />
+            <p>Python</p>
+          </li>
+          <li class="skill">
+            <img src="./assets/img/skills/git.png" alt="Git" />
+            <p>Git</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="soft-skills-container">
+        <h2>Soft Skills</h2>
+        <ul class="soft-skills">
+          <li class="soft-skill">
+            <img
+              src="./assets/img/soft-skills/creativity.png"
+              alt="Creativity"
+            />
+            <p>Creativity</p>
+          </li>
+          <li class="soft-skill">
+            <img
+              src="./assets/img/soft-skills/communication.png"
+              alt="Communication"
+            />
+            <p>Communication</p>
+          </li>
+          <li class="soft-skill">
+            <img src="./assets/img/soft-skills/teamwork.png" alt="Teamwork" />
+            <p>Teamwork</p>
+          </li>
+          <li class="soft-skill">
+            <img
+              src="./assets/img/soft-skills/time-managment.png"
+              alt="Time Managment"
+            />
+            <p>Time Managment</p>
+          </li>
+        </ul>
+      </section>
+      <section class="software-container">
+        <h2>Software</h2>
+        <ul class="softwares">
+          <li class="software">
+            <img src="./assets/img/software/visual-studio-code.png" alt="" />
+            <p>Visual Studio Code</p>
+          </li>
+          <li class="software">
+            <img src="./assets/img/software/figma.png" alt="" />
+            <p>Notion</p>
+          </li>
+          <li class="software">
+            <img src="./assets/img/software/illustrator.png" alt="" />
+            <p>Figma</p>
+          </li>
+          <li class="software">
+            <img src="./assets/img/software/fusion-360.png" alt="" />
+            <p>Fusion 360</p>
+          </li>
+        </ul>
+      </section>
+      <section class="project-container">
+        <h2>Projects</h2>
+        <ul class="projects">
+          <li class="project">
+            <a href=""
+              ><div>
+                <img src="./assets/img/project/project1.png" alt="Project 1" />
+                <h3>Project 1</h3>
+                <p>Description</p>
+              </div></a
+            >
+          </li>
+
+          <li class="project">
+            <a href=""
+              ><div>
+                <img src="./assets/img/project/project2.png" alt="Project 2" />
+                <h3>Project 2</h3>
+                <p>Description</p>
+              </div></a
+            >
+          </li>
+          <li class="project">
+            <a href=""
+              ><div>
+                <img src="./assets/img/project/project3.png" alt="Project 3" />
+                <h3>Project 3</h3>
+                <p>Description</p>
+              </div></a
+            >
+          </li>
+        </ul>
+      </section>
     </main>
+    <!-- Footer -->
+    <footer>
+      <p>© 2021 Hectop4 Portfolio</p>
+    </footer>
   </body>
 </html>
