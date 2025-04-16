@@ -34,16 +34,109 @@
       </ul>
     </nav>
 
-    <main class="flex flex-col items-center justify-start h-screen mt-28">
-      <div class="w-5/12 h-4/5">
+    <main class="flex flex-col items-center justify-content h-screen mt-28">
+      <div class="w-6/12 h-auto flex flex-row">
         <div
-          class="image-container rounded-xl w-1/2 h-1/2 overflow-hidden flex justify-center items-center"
+          class="image-container rounded-xl w-1/2 h-1/2 overflow-hidden flex justify-center items-center min-w-48 mt-32"
         >
-            <div class="inset-0 bg-gradient-to-tkl from-red-400 to-red-950  w-full h-full flex justify-center items-center">
-              <img src="./src/profile-picture.png" alt="" class="w-auto h-auto" />
-            </div>
-           
+          <span class="blur"></span>
+          <img src="./src/profile-picture.png" alt="" class="w-auto h-auto" />
+        </div>
+        <div class="flex flex-col mt-16">
+          <div class="arrow"></div>
+          <div class="text-white text-md">
+            Hello! I am <span class="text-[#7127BA]">Hector Puentes</span>
           </div>
+
+          <div class="ml-3">
+            <p class="mt-20 text-lg text-white">An engineer who</p>
+
+            <h1 class="text-6xl text-white relative mt-4">
+              Values the Knowledge over
+              <span class="text-[#7127ba] relative">
+                Everything
+                <div
+                  class="oval absolute inset-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                ></div>
+              </span>
+              ...
+            </h1>
+            <p class="text-white mt-4">
+              Because it give us the power to change tow world
+            </p>
+
+            <div class="social flex flex-col mt-5">
+              <ul class="flex justify-evenly items-center flex-wrap">
+                <li class="bg-purple-700 w-9 h-9 rounded-lg mt-2">
+                  <a href="https://github.com/hectop4"
+                    ><img
+                      class="w-auto h-auto"
+                      src="https://img.icons8.com/ios_filled/512/github.png"
+                      alt=""
+                  /></a>
+                </li>
+                <li class="mt-2 bg-purple-700 w-9 h-9 rounded-lg">
+                  <a
+                    href="https://www.linkedin.com/in/hector-puentes-b99309215/"
+                    ><img
+                      src="https://cdn3.iconfinder.com/data/icons/2018-social-media-black-and-white-logos/1000/2018_social_media_popular_app_logo_linkedin-512.png"
+                      alt=""
+                  /></a>
+                </li>
+                <li class="mt-2 bg-purple-700 w-9 h-9 px-1 rounded-lg">
+                  <a href="https://orcid.org/0009-0008-9311-4598"
+                    ><img
+                      class="mt-1"
+                      src="https://static-00.iconduck.com/assets.00/orcid-icon-2048x2048-aymga7ag.png"
+                      alt=""
+                  /></a>
+                </li>
+
+                <li class="h-9 w-80 mt-2">
+                  <div
+                    class="bg-[#9857D3] w-full h-full rounded-lg flex flex-row justify-between items-center"
+                  >
+                    <p class="text-white/50 ml-4 text-sm">
+                      hectorjosepuentesruiz@gmail.com
+                    </p>
+                    <button
+                      class="cp-email h-full w-auto bg-purple-900 rounded-lg active:bg-purple-400"
+                    >
+                      <img
+                        class="w-full h-full py-1 px-1"
+                        src="https://cdn-icons-png.flaticon.com/512/1621/1621635.png"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="open-cv mt-2 bg-purple-700 active:bg-purple-400 px-3 py-2 rounded-lg text-white text-lg"
+                  >
+                    Curriculum
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-5/12 h-auto flex flex-col mt-14">
+        <h1 class="text-6xl text-white">I'm an Electronic Engineer.</h1>
+        <div class="whitespace-pre-line">
+          <p class="text-white text-2xl">
+            Currently, I'm an Electronic Enginieer looking for job,
+          </p>
+          <p class="text-white text-2xl">
+            A self-taught Front-End Developer, Recently graduated
+          </p>
+          <p class="text-white text-2xl">
+            Also dedicated to content cration via YoutuTube videos about project
+            development in engineering, DIY, and explanation of concepts used in
+            those fields (math, physics, circuits, etc).
+          </p>
         </div>
       </div>
     </main>
