@@ -6,26 +6,44 @@
     <link href="./src/output.css" rel="stylesheet" />
   </head>
   <body>
-    <nav class="bg-[#1A0B2E] h-28 flex justify-evenly items-center px-10">
+    <nav class="bg-[#1A0B2E] h-28 flex justify-around items-center">
       <a href="/">
         <img src="./src/Logo.png" alt="Logo" class="h-32" />
       </a>
 
       <ul
-        class="list-none flex justify-evenly items-center h-full text-white font-sans font-medium text-xl space-x-48"
+        class="list-none flex justify-evenly items-center h-full text-white font-sans font-medium text-xl space-x-10"
       >
-        <li class="w-auto">
+        <li class="hover:text-[#494949] rounded-md px-4 py-4">
           <a href="/">Home</a>
         </li>
 
-        <li>
-          <a href="./about">About</a>
+        <li class="hover:text-[#494949] rounded-md px-4 py-4">
+          <a href="https://www.instagram.com/hectorjosepuentesruiz2023/"
+            >Instagram</a
+          >
         </li>
 
-        <li>
-          <a href="./Blogs">Blogs</a>
+        <li class="hover:text-[#494949] rounded-md px-4 py-4">
+          <a href="https://www.youtube.com/@SeamosIngeniosos"
+            >YouTube Channel</a
+          >
         </li>
       </ul>
     </nav>
+
+    <main class="flex flex-col items-center justify-start h-screen mt-28">
+      <div class="w-5/12 h-4/5">
+        <div
+          class="image-container rounded-xl w-1/2 h-1/2 overflow-hidden flex justify-center items-center"
+        >
+            <div class="inset-0 bg-gradient-to-tkl from-red-400 to-red-950  w-full h-full flex justify-center items-center">
+              <img src="./src/profile-picture.png" alt="" class="w-auto h-auto" />
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
