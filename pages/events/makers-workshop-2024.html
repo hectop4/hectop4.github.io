@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html class="bg-[#11071F]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makers Workshop 2024 - Hector Puentes</title>
+    <link href="../../assets/css/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav
+      class="bg-[#1A0B2E] h-20 md:h-24 lg:h-26 2xl:h-28 flex justify-between md:justify-around items-center px-4 md:px-6 2xl:px-0"
+    >
+      <a href="../../">
+        <img
+          src="../../assets/images/Logo.png"
+          alt="Logo"
+          class="h-16 md:h-20 lg:h-24 2xl:h-32"
+        />
+      </a>
+
+      <ul
+        class="list-none hidden md:flex justify-around items-center h-full text-white font-sans font-medium text-sm md:text-base lg:text-lg 2xl:text-xl space-x-4 md:space-x-8 lg:space-x-16 2xl:space-x-48"
+      >
+        <li class="w-auto hover:text-gray-400">
+          <a href="../../">Home</a>
+        </li>
+        <li class="w-auto hover:text-gray-400">
+          <a href="../../#events">Events</a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/hectorjosepuentesruiz2023/"
+            class="hover:text-gray-400"
+            >Instagram</a
+          >
+        </li>
+        <li class="hover:text-gray-400">
+          <a href="https://www.youtube.com/@SeamosIngeniosos"
+            >Youtube Channel</a
+          >
+        </li>
+      </ul>
+
+      <!-- Mobile menu button -->
+      <button class="md:hidden text-white p-2" id="mobile-menu-btn">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+
+      <!-- Mobile menu -->
+      <div
+        class="absolute top-20 left-0 w-full bg-[#1A0B2E] md:hidden hidden z-50"
+        id="mobile-menu"
+      >
+        <ul
+          class="flex flex-col space-y-4 p-4 text-white font-sans font-medium text-lg"
+        >
+          <li class="w-auto hover:text-gray-400">
+            <a href="../../">Home</a>
+          </li>
+          <li class="w-auto hover:text-gray-400">
+            <a href="../../#events">Events</a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/hectorjosepuentesruiz2023/"
+              class="hover:text-gray-400"
+              >Instagram</a
+            >
+          </li>
+          <li class="hover:text-gray-400">
+            <a href="https://www.youtube.com/@SeamosIngeniosos"
+              >Youtube Channel</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main
+      class="flex flex-col items-center justify-content h-auto w-full mt-8 md:mt-16 lg:mt-20 2xl:mt-28 px-4 md:px-6 lg:px-8 2xl:px-0"
+    >
+      <!-- Back Button -->
+      <div class="w-full max-w-6xl mb-6">
+        <button
+          onclick="history.back()"
+          class="flex items-center text-[#7127BA] hover:text-purple-400 transition-colors"
+        >
+          <svg
+            class="w-5 h-5 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            ></path>
+          </svg>
+          Volver a Eventos
+        </button>
+      </div>
+
+      <!-- Event Header -->
+      <div class="w-full max-w-6xl mb-8 md:mb-12">
+        <div class="bg-[#251C31] rounded-xl p-6 md:p-8">
+          <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Event Image -->
+            <div class="lg:w-1/2">
+              <div
+                class="aspect-video bg-gradient-to-br from-purple-900 to-purple-700 rounded-lg overflow-hidden"
+              >
+                <img
+                  src="../../assets/images/Logo.png"
+                  alt="Makers Workshop 2024"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <!-- Event Info -->
+            <div class="lg:w-1/2">
+              <h1
+                class="text-3xl md:text-4xl lg:text-5xl text-white font-bold mb-4"
+              >
+                Makers Workshop 2024
+              </h1>
+
+              <p class="text-gray-300 text-lg mb-6">
+                Taller intensivo de makers donde aprendí nuevas técnicas de
+                prototipado y fabricación digital usando herramientas como
+                Arduino, impresión 3D y diseño CAD.
+              </p>
+
+              <!-- Event Details -->
+              <div class="mb-6">
+                <div class="grid grid-cols-2 gap-4 text-sm md:text-base">
+                  <div>
+                    <span class="text-gray-400">Fecha:</span>
+                    <p class="text-white">20-22 Enero 2024</p>
+                  </div>
+                  <div>
+                    <span class="text-gray-400">Ubicación:</span>
+                    <p class="text-white">FabLab Local</p>
+                  </div>
+                  <div>
+                    <span class="text-gray-400">Duración:</span>
+                    <p class="text-white">3 días</p>
+                  </div>
+                  <div>
+                    <span class="text-gray-400">Participantes:</span>
+                    <p class="text-white">50+ makers</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Topics -->
+              <div class="mb-6">
+                <h3 class="text-white text-xl mb-3">Temáticas Principales</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-purple-700 text-white px-3 py-1 rounded-full text-sm"
+                    >Arduino</span
+                  >
+                  <span
+                    class="bg-purple-700 text-white px-3 py-1 rounded-full text-sm"
+                    >Impresión 3D</span
+                  >
+                  <span
+                    class="bg-purple-700 text-white px-3 py-1 rounded-full text-sm"
+                    >Diseño CAD</span
+                  >
+                  <span
+                    class="bg-purple-700 text-white px-3 py-1 rounded-full text-sm"
+                    >Prototipado</span
+                  >
+                  <span
+                    class="bg-purple-700 text-white px-3 py-1 rounded-full text-sm"
+                    >DIY</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- What I Learned -->
+      <div class="w-full max-w-6xl mb-12">
+        <div class="bg-[#251C31] rounded-xl p-6 md:p-8">
+          <h2 class="text-2xl md:text-3xl text-white font-bold mb-6">
+            Lo que Aprendí
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl text-white mb-4">Habilidades Técnicas</h3>
+              <ul class="text-gray-300 space-y-3">
+                <li class="flex items-start">
+                  <span class="text-[#7127BA] mr-2">•</span>
+                  Técnicas avanzadas de modelado 3D en Fusion360
+                </li>
+                <li class="flex items-start">
+                  <span class="text-[#7127BA] mr-2">•</span>
+                  Optimización de impresiones 3D para diferentes materiales
+                </li>
+                <li class="flex items-start">
+                  <span class="text-[#7127BA] mr-2">•</span>
+                  Programación de Arduino para proyectos complejos
+                </li>
+                <li class="flex items-start">
+                  <span class="text-[#7127BA] mr-2">•</span>
+                  Integración de sensores y actuadores en prototipos
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl text-white mb-4">Metodologías Maker</h3>
+              <ul class="text-gray-300 space-y-3">
+                <li class="flex items-start">
+                  <span class="text-[#7127BA] mr-2">•</span>
+                  Metodología de prototipado rápido
+                </li>
+                <li class="flex items-start">
+                  <span class="text-[#7127BA] mr-2">•</span>
+                  Filosofía del "aprender haciendo"
+                </li>
+                <li class="flex items-start">
+                  <span class="text-[#7127BA] mr-2">•</span>
+                  Colaboración en espacios de co-creación
+                </li>
+                <li class="flex items-start">
+                  <span class="text-[#7127BA] mr-2">•</span>
+                  Documentación efectiva de proyectos maker
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Moments -->
+      <div class="w-full max-w-6xl mb-12">
+        <div class="bg-[#251C31] rounded-xl p-6 md:p-8">
+          <h2 class="text-2xl md:text-3xl text-white font-bold mb-6">
+            Momentos Importantes
+          </h2>
+
+          <div class="space-y-6">
+            <div class="border-l-4 border-[#7127BA] pl-6">
+              <h3 class="text-lg text-white font-semibold mb-2">
+                Primera Impresión 3D Exitosa
+              </h3>
+              <p class="text-gray-300">
+                Logré diseñar e imprimir mi primera pieza funcional
+                completamente desde cero, un soporte personalizado para mi
+                proyecto de Arduino.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-[#7127BA] pl-6">
+              <h3 class="text-lg text-white font-semibold mb-2">
+                Hackathon de 24 Horas
+              </h3>
+              <p class="text-gray-300">
+                Participé en un hackathon intensivo donde desarrollamos un
+                sistema de monitoreo ambiental usando Arduino y sensores IoT.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-[#7127BA] pl-6">
+              <h3 class="text-lg text-white font-semibold mb-2">
+                Presentación del Prototipo Final
+              </h3>
+              <p class="text-gray-300">
+                Presenté mi proyecto final: un sistema automatizado de riego
+                para plantas que integra sensores de humedad y control remoto
+                vía WiFi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Gallery -->
+      <div class="w-full max-w-6xl mb-12">
+        <div class="bg-[#251C31] rounded-xl p-6 md:p-8">
+          <h2 class="text-2xl md:text-3xl text-white font-bold mb-6">
+            Galería del Evento
+          </h2>
+
+          <div class="grid md:grid-cols-3 gap-4">
+            <div
+              class="aspect-video bg-gradient-to-br from-purple-900 to-purple-700 rounded-lg overflow-hidden"
+            >
+              <img
+                src="../../assets/images/Logo.png"
+                alt="Taller de impresión 3D"
+                class="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                onclick="openLightbox('../../assets/images/Logo.png', 'Taller de impresión 3D')"
+              />
+            </div>
+            <div
+              class="aspect-video bg-gradient-to-br from-violet-900 to-violet-700 rounded-lg overflow-hidden"
+            >
+              <img
+                src="../../assets/images/Logo.png"
+                alt="Programación Arduino"
+                class="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                onclick="openLightbox('../../assets/images/Logo.png', 'Programación Arduino')"
+              />
+            </div>
+            <div
+              class="aspect-video bg-gradient-to-br from-indigo-900 to-indigo-700 rounded-lg overflow-hidden"
+            >
+              <img
+                src="../../assets/images/Logo.png"
+                alt="Diseño CAD"
+                class="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                onclick="openLightbox('../../assets/images/Logo.png', 'Diseño CAD')"
+              />
+            </div>
+            <div
+              class="aspect-video bg-gradient-to-br from-purple-800 to-purple-600 rounded-lg overflow-hidden"
+            >
+              <img
+                src="../../assets/images/Logo.png"
+                alt="Hackathon en progreso"
+                class="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                onclick="openLightbox('../../assets/images/Logo.png', 'Hackathon en progreso')"
+              />
+            </div>
+            <div
+              class="aspect-video bg-gradient-to-br from-fuchsia-900 to-fuchsia-700 rounded-lg overflow-hidden"
+            >
+              <img
+                src="../../assets/images/Logo.png"
+                alt="Prototipos finales"
+                class="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                onclick="openLightbox('../../assets/images/Logo.png', 'Prototipos finales')"
+              />
+            </div>
+            <div
+              class="aspect-video bg-gradient-to-br from-pink-900 to-pink-700 rounded-lg overflow-hidden"
+            >
+              <img
+                src="../../assets/images/Logo.png"
+                alt="Equipo de trabajo"
+                class="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                onclick="openLightbox('../../assets/images/Logo.png', 'Equipo de trabajo')"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="bg-[#1A0B2E] h-auto md:h-12 flex flex-col md:flex-row justify-center md:justify-around items-center mt-16 md:mt-20 lg:mt-24 2xl:mt-32 p-4 md:p-0 space-y-2 md:space-y-0"
+    >
+      <p
+        class="text-white text-sm md:text-base lg:text-lg 2xl:text-lg text-center"
+      >
+        © 2023 Hector Puentes
+      </p>
+      <p
+        class="text-white text-sm md:text-base lg:text-lg 2xl:text-lg text-center"
+      >
+        All rights reserved
+      </p>
+      <p
+        class="text-white text-sm md:text-base lg:text-lg 2xl:text-lg text-center"
+      >
+        Made with ❤️
+      </p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div
+      id="lightbox"
+      class="lightbox"
+      onclick="if(event.target === this) closeLightbox()"
+    >
+      <div class="lightbox-content">
+        <button class="lightbox-close" onclick="closeLightbox()">
+          &times;
+        </button>
+        <img id="lightbox-img" class="lightbox-image" src="" alt="" />
+        <button
+          class="lightbox-nav-btn lightbox-prev"
+          onclick="showPrevImage()"
+        >
+          &lt;
+        </button>
+        <button
+          class="lightbox-nav-btn lightbox-next"
+          onclick="showNextImage()"
+        >
+          &gt;
+        </button>
+        <div class="lightbox-counter">
+          <span id="lightbox-counter">1 / 1</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../assets/js/script.js"></script>
+  </body>
+</html>

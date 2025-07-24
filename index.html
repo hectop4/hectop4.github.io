@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./src/output.css" rel="stylesheet" />
+    <link href="./assets/css/output.css" rel="stylesheet" />
   </head>
   <body>
     <nav
@@ -11,7 +11,7 @@
     >
       <a href="/">
         <img
-          src="./src/Logo.png"
+          src="./assets/images/Logo.png"
           alt="Logo"
           class="h-16 md:h-20 lg:h-24 2xl:h-32"
         />
@@ -94,7 +94,7 @@
         >
           <span class="blur"></span>
           <img
-            src="./src/profile-picture.png"
+            src="./assets/images/profile-picture.png"
             alt=""
             class="w-auto h-auto max-w-full"
           />
@@ -168,7 +168,7 @@
                 </li>
 
                 <li
-                  class="h-8 md:h-9 w-full md:w-full sm:w-64 lg:w-72 2xl:w-80 min-w-60 md:min-w-0 mt-2 flex justify-center md:justify-start"
+                  class="h-8 md:h-9 w-full md:w-full lg:w-72 2xl:w-80 min-w-60 md:min-w-0 mt-2 flex justify-center md:justify-start"
                 >
                   <div
                     class="bg-[#9857D3] w-full h-full rounded-lg flex flex-row justify-between items-center"
@@ -458,12 +458,12 @@
         class="w-full md:w-10/12 lg:w-8/12 2xl:w-8/12 h-auto flex flex-col -top-32 md:-top-40 lg:-top-48 2xl:-top-52 relative -z-10"
       >
         <img
-          src="./src/Group 1910.svg"
+          src="./assets/images/Group 1910.svg"
           alt=""
           class="opacity-0 lg:opacity-100"
         />
         <h1
-          class="text-white text-xl md:text-xl lg:text-2xl 2xl:text-2xl text-center mt-4"
+          class="text-white text-xl md:text-xl lg:text-2xl 2xl:text-2xl text-center mt-1"
         >
           I'm currently looking to join a cross-functional team
         </h1>
@@ -474,6 +474,389 @@
           innovation.
         </h2>
       </div>
+
+      <!-- Projects Section -->
+      <section
+        class="w-full max-w-6xl mx-auto px-4 md:px-6 lg:px-8 2xl:px-0 mt-1 md:mt-1 mb-20"
+      >
+        <h2
+          class="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl text-white text-center mb-8 md:mb-12"
+        >
+          My <span class="text-[#7127BA]">Projects</span>
+        </h2>
+
+        <!-- Carousel Container -->
+        <div class="relative">
+          <!-- Carousel Wrapper -->
+          <div class="overflow-hidden rounded-xl">
+            <div
+              class="carousel-container flex transition-transform duration-500 ease-in-out"
+              id="carousel"
+            >
+              <!-- Project 1 -->
+              <div class="carousel-slide w-full flex-shrink-0 px-2">
+                <div
+                  class="bg-[#251C31] rounded-xl p-4 md:p-6 h-auto cursor-pointer hover:bg-[#2A1F3D] transition-colors duration-300"
+                  onclick="window.location.href='pages/projects/project1.html'"
+                >
+                  <div
+                    class="aspect-video bg-gradient-to-br from-purple-900 to-purple-700 rounded-lg mb-4 md:mb-6 overflow-hidden"
+                  >
+                    <img
+                      src="./assets/images/Logo.png"
+                      alt="Project 1"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    class="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4"
+                  >
+                    Control System Project
+                  </h3>
+                  <p
+                    class="text-gray-300 text-sm md:text-base leading-relaxed mb-4 md:mb-6"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mb-4 md:mb-6">
+                    <span
+                      class="bg-purple-700 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm"
+                      >Arduino</span
+                    >
+                    <span
+                      class="bg-purple-700 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm"
+                      >C++</span
+                    >
+                    <span
+                      class="bg-purple-700 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm"
+                      >IoT</span
+                    >
+                  </div>
+                  <div
+                    class="text-[#7127BA] font-semibold text-sm md:text-base hover:text-purple-400 transition-colors"
+                  >
+                    Ver Proyecto →
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 2 -->
+              <div class="carousel-slide w-full flex-shrink-0 px-2">
+                <div
+                  class="bg-[#251C31] rounded-xl p-4 md:p-6 h-auto cursor-pointer hover:bg-[#2A1F3D] transition-colors duration-300"
+                  onclick="window.location.href='pages/projects/project2.html'"
+                >
+                  <div
+                    class="aspect-video bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg mb-4 md:mb-6 overflow-hidden"
+                  >
+                    <img
+                      src="./assets/images/Logo.png"
+                      alt="Project 2"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    class="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4"
+                  >
+                    Web Development Platform
+                  </h3>
+                  <p
+                    class="text-gray-300 text-sm md:text-base leading-relaxed mb-4 md:mb-6"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mb-4 md:mb-6">
+                    <span
+                      class="bg-purple-700 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm"
+                      >HTML</span
+                    >
+                    <span
+                      class="bg-purple-700 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm"
+                      >CSS</span
+                    >
+                    <span
+                      class="bg-purple-700 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm"
+                      >JavaScript</span
+                    >
+                  </div>
+                  <div
+                    class="text-[#7127BA] font-semibold text-sm md:text-base hover:text-purple-400 transition-colors"
+                  >
+                    Ver Proyecto →
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 3 -->
+              <div class="carousel-slide w-full flex-shrink-0 px-2">
+                <div
+                  class="bg-[#251C31] rounded-xl p-4 md:p-6 h-auto cursor-pointer hover:bg-[#2A1F3D] transition-colors duration-300"
+                  onclick="window.location.href='pages/projects/project3.html'"
+                >
+                  <div
+                    class="aspect-video bg-gradient-to-br from-green-900 to-green-700 rounded-lg mb-4 md:mb-6 overflow-hidden"
+                  >
+                    <img
+                      src="./assets/images/Logo.png"
+                      alt="Project 3"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3
+                    class="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4"
+                  >
+                    Data Analysis Tool
+                  </h3>
+                  <p
+                    class="text-gray-300 text-sm md:text-base leading-relaxed mb-4 md:mb-6"
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mb-4 md:mb-6">
+                    <span
+                      class="bg-purple-700 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm"
+                      >Python</span
+                    >
+                    <span
+                      class="bg-purple-700 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm"
+                      >MATLAB</span
+                    >
+                    <span
+                      class="bg-purple-700 text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm"
+                      >Analysis</span
+                    >
+                  </div>
+                  <div
+                    class="text-[#7127BA] font-semibold text-sm md:text-base hover:text-purple-400 transition-colors"
+                  >
+                    Ver Proyecto →
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <button
+            class="carousel-prev absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-[#7127BA] hover:bg-purple-600 text-white p-2 md:p-3 rounded-full transition-colors duration-300 z-10"
+            id="prevBtn"
+          >
+            <svg
+              class="w-4 h-4 md:w-6 md:h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
+          </button>
+          <button
+            class="carousel-next absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-[#7127BA] hover:bg-purple-600 text-white p-2 md:p-3 rounded-full transition-colors duration-300 z-10"
+            id="nextBtn"
+          >
+            <svg
+              class="w-4 h-4 md:w-6 md:h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Indicators -->
+          <div
+            class="flex justify-center mt-4 md:mt-6 space-x-2"
+            id="indicators"
+          >
+            <button
+              class="indicator w-2 h-2 md:w-3 md:h-3 rounded-full bg-purple-700 transition-colors duration-300"
+              data-slide="0"
+            ></button>
+            <button
+              class="indicator w-2 h-2 md:w-3 md:h-3 rounded-full bg-gray-600 transition-colors duration-300"
+              data-slide="1"
+            ></button>
+            <button
+              class="indicator w-2 h-2 md:w-3 md:h-3 rounded-full bg-gray-600 transition-colors duration-300"
+              data-slide="2"
+            ></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Events Section -->
+      <section
+        class="w-full max-w-6xl mx-auto px-4 md:px-6 lg:px-8 2xl:px-0 mt-16 md:mt-20 mb-20"
+        id="events"
+      >
+        <h2
+          class="text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl text-white text-center mb-8 md:mb-12"
+        >
+          My <span class="text-[#7127BA]">Events</span>
+        </h2>
+
+        <!-- Events Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+        >
+          <!-- Event 1 -->
+          <div
+            class="bg-[#251C31] rounded-xl overflow-hidden hover:bg-[#2A1F3D] transition-colors duration-300 cursor-pointer"
+            onclick="window.location.href='pages/events/tech-conference-2023.html'"
+          >
+            <div
+              class="aspect-video bg-gradient-to-br from-blue-900 to-blue-700 overflow-hidden"
+            >
+              <img
+                src="./assets/images/Logo.png"
+                alt="Tech Conference 2023"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-4 md:p-6">
+              <h3 class="text-xl md:text-2xl font-bold text-white mb-3">
+                Tech Conference 2023
+              </h3>
+              <p
+                class="text-gray-300 text-sm md:text-base leading-relaxed mb-4"
+              >
+                Conferencia internacional de tecnología donde participé como
+                asistente y tuve la oportunidad de aprender sobre las últimas
+                tendencias en desarrollo web.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-blue-700 text-white px-3 py-1 rounded-full text-xs"
+                  >Tecnología</span
+                >
+                <span
+                  class="bg-blue-700 text-white px-3 py-1 rounded-full text-xs"
+                  >Networking</span
+                >
+                <span
+                  class="bg-blue-700 text-white px-3 py-1 rounded-full text-xs"
+                  >Desarrollo Web</span
+                >
+              </div>
+              <div
+                class="text-[#7127BA] font-semibold text-sm md:text-base hover:text-purple-400 transition-colors"
+              >
+                Ver Evento →
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div
+            class="bg-[#251C31] rounded-xl overflow-hidden hover:bg-[#2A1F3D] transition-colors duration-300 cursor-pointer"
+            onclick="window.location.href='pages/events/engineering-summit-2023.html'"
+          >
+            <div
+              class="aspect-video bg-gradient-to-br from-green-900 to-green-700 overflow-hidden"
+            >
+              <img
+                src="./assets/images/Logo.png"
+                alt="Engineering Summit 2023"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-4 md:p-6">
+              <h3 class="text-xl md:text-2xl font-bold text-white mb-3">
+                Engineering Summit 2023
+              </h3>
+              <p
+                class="text-gray-300 text-sm md:text-base leading-relaxed mb-4"
+              >
+                Cumbre de ingeniería donde presenté mi proyecto de sistemas de
+                control y conocí a otros ingenieros innovadores del sector.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-green-700 text-white px-3 py-1 rounded-full text-xs"
+                  >Ingeniería</span
+                >
+                <span
+                  class="bg-green-700 text-white px-3 py-1 rounded-full text-xs"
+                  >IoT</span
+                >
+                <span
+                  class="bg-green-700 text-white px-3 py-1 rounded-full text-xs"
+                  >Innovación</span
+                >
+              </div>
+              <div
+                class="text-[#7127BA] font-semibold text-sm md:text-base hover:text-purple-400 transition-colors"
+              >
+                Ver Evento →
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div
+            class="bg-[#251C31] rounded-xl overflow-hidden hover:bg-[#2A1F3D] transition-colors duration-300 cursor-pointer"
+            onclick="window.location.href='pages/events/makers-workshop-2024.html'"
+          >
+            <div
+              class="aspect-video bg-gradient-to-br from-purple-900 to-purple-700 overflow-hidden"
+            >
+              <img
+                src="./assets/images/Logo.png"
+                alt="Makers Workshop 2024"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-4 md:p-6">
+              <h3 class="text-xl md:text-2xl font-bold text-white mb-3">
+                Makers Workshop 2024
+              </h3>
+              <p
+                class="text-gray-300 text-sm md:text-base leading-relaxed mb-4"
+              >
+                Taller de makers donde aprendí nuevas técnicas de prototipado y
+                fabricación digital usando herramientas como Arduino y impresión
+                3D.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-purple-700 text-white px-3 py-1 rounded-full text-xs"
+                  >Makers</span
+                >
+                <span
+                  class="bg-purple-700 text-white px-3 py-1 rounded-full text-xs"
+                  >Arduino</span
+                >
+                <span
+                  class="bg-purple-700 text-white px-3 py-1 rounded-full text-xs"
+                  >3D Printing</span
+                >
+              </div>
+              <div
+                class="text-[#7127BA] font-semibold text-sm md:text-base hover:text-purple-400 transition-colors"
+              >
+                Ver Evento →
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div></div>
     </main>
@@ -512,6 +895,6 @@
       </p>
     </footer>
 
-    <script src="./src/script.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
