@@ -4,22 +4,22 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        font-family: "Preahvihear", sans-serif;
-    }
-    .blur {
-        position: absolute;
-        box-shadow: 0 0 100px 120px #763cac;
-        z-index: -1;
-    }
-    .oval {
-        height: 80px;
-        width: 350px;
-        border: 1px solid #fff;
-        border-radius: 50%;
-        position: relative;
-        z-index: -1;
-        bottom: 0px;
-        right: 0px;
-    }
+  html {
+    font-family: "Preahvihear", sans-serif;
+  }
+  .blur {
+    position: absolute;
+    box-shadow: 0 0 100px 120px #763cac;
+    z-index: -1;
+  }
+  .oval {
+    height: 80px;
+    width: 350px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    z-index: -1;
+    bottom: 0px;
+    right: 0px;
+  }
 }
