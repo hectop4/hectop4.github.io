@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Control System Project - Hector Puentes</title>
+    <title>Desarrollo de Rover TeleOperado - Hector Puentes</title>
     <link href="../../assets/css/output.css" rel="stylesheet" />
   </head>
   <body>
@@ -121,11 +121,11 @@
             <!-- Project Image -->
             <div class="lg:w-1/2">
               <div
-                class="aspect-video bg-gradient-to-br from-purple-900 to-purple-700 rounded-lg overflow-hidden"
+                class="aspect-video bg-gradient-to-br from-orange-900 to-orange-700 rounded-lg overflow-hidden"
               >
                 <img
-                  src="../../assets/images/Logo.png"
-                  alt="Control System Project"
+                  src="../../assets/images/desarrollo-rover-teleoperado/rover.jpeg"
+                  alt="Desarrollo de Rover TeleOperado"
                   class="w-full h-full object-cover"
                 />
               </div>
@@ -136,13 +136,15 @@
               <h1
                 class="text-3xl md:text-4xl lg:text-5xl text-white font-bold mb-4"
               >
-                Control System Project
+                Desarrollo de Rover TeleOperado para exploración terrestre
               </h1>
 
               <p class="text-gray-300 text-lg mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                Rover diseñado para participar en el concurso Rover Innovation
+                Challenge 2024 en Colombia. Opera como servidor-cliente mediante
+                HTTP para explorar entornos irregulares, sensando variables
+                climáticas y transmitiendo datos en tiempo real a una estación
+                terrena.
               </p>
 
               <!-- Technologies -->
@@ -151,23 +153,27 @@
                 <div class="flex flex-wrap gap-2">
                   <span
                     class="bg-purple-700 text-white px-3 py-1 rounded-full text-sm"
-                    >Arduino</span
+                    >ESP32</span
                   >
                   <span
                     class="bg-purple-700 text-white px-3 py-1 rounded-full text-sm"
-                    >C++</span
+                    >Python</span
                   >
                   <span
                     class="bg-purple-700 text-white px-3 py-1 rounded-full text-sm"
-                    >IoT</span
+                    >Ubuntu</span
                   >
                   <span
                     class="bg-purple-700 text-white px-3 py-1 rounded-full text-sm"
-                    >Sensores</span
+                    >ESP-NOW</span
                   >
                   <span
                     class="bg-purple-700 text-white px-3 py-1 rounded-full text-sm"
-                    >PCB Design</span
+                    >HTTP</span
+                  >
+                  <span
+                    class="bg-purple-700 text-white px-3 py-1 rounded-full text-sm"
+                    >WebCam 720p</span
                   >
                 </div>
               </div>
@@ -181,7 +187,7 @@
                   Ver Demo
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/hectop4/amity-project"
                   class="border border-[#7127BA] text-[#7127BA] hover:bg-[#7127BA] hover:text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center"
                 >
                   Ver Código
@@ -204,16 +210,17 @@
             <div>
               <h3 class="text-xl text-white mb-4">Descripción</h3>
               <p class="text-gray-300 leading-relaxed mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Este rover fue desarrollado específicamente para participar en
+                el Rover Innovation Challenge 2024 celebrado en Colombia. El
+                sistema utiliza una arquitectura servidor-cliente basada en HTTP
+                para permitir la operación remota desde una estación terrena.
               </p>
               <p class="text-gray-300 leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
+                El rover está equipado con una placa de computador reciclado con
+                Ubuntu, complementado con dos ESP32 para conectar sensores y
+                actuadores. Utiliza protocolos ESP-NOW para la comunicación con
+                la estación terrena y Python para el servidor, recolección y
+                almacenamiento de datos.
               </p>
             </div>
 
@@ -223,23 +230,27 @@
               <ul class="text-gray-300 space-y-2">
                 <li class="flex items-start">
                   <span class="text-[#7127BA] mr-2">•</span>
-                  Control automático de temperatura
+                  Sensado de presión atmosférica
                 </li>
                 <li class="flex items-start">
                   <span class="text-[#7127BA] mr-2">•</span>
-                  Monitoreo en tiempo real
+                  Medición de altitud y temperatura
                 </li>
                 <li class="flex items-start">
                   <span class="text-[#7127BA] mr-2">•</span>
-                  Interfaz web responsive
+                  Anemómetro integrado para velocidad del viento
                 </li>
                 <li class="flex items-start">
                   <span class="text-[#7127BA] mr-2">•</span>
-                  Conectividad IoT
+                  Cámara web de 720p para exploración visual
                 </li>
                 <li class="flex items-start">
                   <span class="text-[#7127BA] mr-2">•</span>
-                  Alertas automáticas
+                  Comunicación HTTP servidor-cliente
+                </li>
+                <li class="flex items-start">
+                  <span class="text-[#7127BA] mr-2">•</span>
+                  Protocolo ESP-NOW para comunicación inalámbrica
                 </li>
               </ul>
             </div>
@@ -256,33 +267,33 @@
 
           <div class="grid md:grid-cols-3 gap-4">
             <div
-              class="aspect-video bg-gradient-to-br from-purple-900 to-purple-700 rounded-lg overflow-hidden"
+              class="aspect-video bg-gradient-to-br from-orange-900 to-orange-700 rounded-lg overflow-hidden"
             >
               <img
-                src="../../assets/images/Logo.png"
-                alt="Interfaz del sistema de control"
+                src="../../assets/images/desarrollo-rover-teleoperado/rover.jpeg"
+                alt="Rover TeleOperado en funcionamiento"
                 class="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
-                onclick="openLightbox('../../assets/images/Logo.png', 'Interfaz del sistema de control')"
+                onclick="openLightbox('../../assets/images/desarrollo-rover-teleoperado/rover.jpeg', 'Rover TeleOperado en funcionamiento')"
               />
             </div>
             <div
               class="aspect-video bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg overflow-hidden"
             >
               <img
-                src="../../assets/images/Logo.png"
-                alt="Circuito de control desarrollado"
+                src="../../assets/images/desarrollo-rover-teleoperado/rover.jpeg"
+                alt="Sistema de sensores climáticos"
                 class="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
-                onclick="openLightbox('../../assets/images/Logo.png', 'Circuito de control desarrollado')"
+                onclick="openLightbox('../../assets/images/desarrollo-rover-teleoperado/rover.jpeg', 'Sistema de sensores climáticos')"
               />
             </div>
             <div
               class="aspect-video bg-gradient-to-br from-green-900 to-green-700 rounded-lg overflow-hidden"
             >
               <img
-                src="../../assets/images/Logo.png"
-                alt="Dashboard de monitoreo en tiempo real"
+                src="../../assets/images/desarrollo-rover-teleoperado/rover.jpeg"
+                alt="Estación terrena de control"
                 class="w-full h-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
-                onclick="openLightbox('../../assets/images/Logo.png', 'Dashboard de monitoreo en tiempo real')"
+                onclick="openLightbox('../../assets/images/desarrollo-rover-teleoperado/rover.jpeg', 'Estación terrena de control')"
               />
             </div>
           </div>
