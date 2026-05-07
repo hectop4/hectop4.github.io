@@ -1,0 +1,89 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+import LanguagePicker from './LanguagePicker.astro';
+import { useTranslations, getLocalePath } from '../i18n/utils';
+import type { Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const nav = [
+  { key: 'nav.home',    href: getLocalePath(lang) },
+  { key: 'nav.blog',    href: getLocalePath(lang, 'blog') },
+  { key: 'nav.contact', href: `${getLocalePath(lang)}#contact` },
+] as const;
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-40 bg-[var(--bg)]/90 backdrop-blur-sm border-b border-[var(--border)]">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between gap-6">
+
+    <!-- Logo -->
+    <a href={getLocalePath(lang)} class="font-serif font-bold text-xl tracking-tight hover:text-[var(--accent)] transition-colors">
+      HJP
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      {nav.map(({ key, href }) => (
+        <a
+          href={href}
+          class={`text-sm font-medium transition-colors hover:text-[var(--accent)] ${
+            currentPath === href ? 'text-[var(--accent)]' : 'text-[var(--text-muted)]'
+          }`}
+        >
+          {t(key)}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Right controls -->
+    <div class="flex items-center gap-2">
+      <LanguagePicker />
+      <ThemeToggle />
+
+      <!-- Mobile hamburger -->
+      <button
+        id="mobile-toggle"
+        aria-label="Toggle menu"
+        class="md:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-[var(--border)] text-[var(--text-muted)]"
+      >
+        <svg id="icon-menu" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="icon-close" class="w-4 h-4 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-[var(--border)] bg-[var(--bg)]">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4">
+      {nav.map(({ key, href }) => (
+        <a
+          href={href}
+          class="text-sm font-medium text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+        >
+          {t(key)}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn   = document.getElementById('mobile-toggle');
+  const menu  = document.getElementById('mobile-menu');
+  const ico1  = document.getElementById('icon-menu');
+  const ico2  = document.getElementById('icon-close');
+
+  btn?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('hidden') === false;
+    ico1?.classList.toggle('hidden', open);
+    ico2?.classList.toggle('hidden', !open);
+  });
+</script>

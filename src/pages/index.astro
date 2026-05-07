@@ -1,0 +1,251 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { useTranslations } from '../i18n/utils';
+
+const lang = 'es';
+const t = useTranslations(lang);
+
+const CDN = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons';
+const skills = {
+  languages: [
+    { name: 'C',          logo: `${CDN}/c/c-original.svg` },
+    { name: 'C++',        logo: `${CDN}/cplusplus/cplusplus-original.svg` },
+    { name: 'Python',     logo: `${CDN}/python/python-original.svg` },
+    { name: 'Django',     logo: `${CDN}/django/django-plain.svg` },
+    { name: 'Kotlin',     logo: `${CDN}/kotlin/kotlin-original.svg` },
+    { name: 'HTML',       logo: `${CDN}/html5/html5-original.svg` },
+    { name: 'CSS',        logo: `${CDN}/css3/css3-original.svg` },
+    { name: 'JavaScript', logo: `${CDN}/javascript/javascript-original.svg` },
+  ],
+  tools: [
+    { name: 'Arduino / ESP32', logo: `${CDN}/arduino/arduino-original.svg` },
+    { name: 'Linux',           logo: `${CDN}/linux/linux-original.svg` },
+    { name: 'Git',             logo: `${CDN}/git/git-original.svg` },
+    { name: 'Fusion 360',      logo: 'https://cdn.simpleicons.org/autodesk/888888' },
+    { name: 'MATLAB',          logo: `${CDN}/matlab/matlab-original.svg` },
+    { name: 'Android Studio',  logo: `${CDN}/androidstudio/androidstudio-original.svg` },
+    { name: 'VS Code',         logo: `${CDN}/vscode/vscode-original.svg` },
+  ],
+};
+
+const socials = [
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/hector-puentes-b99309215/',
+    icon: `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>`,
+  },
+  {
+    label: 'YouTube',
+    href: 'https://www.youtube.com/@SeamosIngeniosos',
+    icon: `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`,
+  },
+  {
+    label: 'GitHub',
+    href: 'https://github.com/hectop4',
+    icon: `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>`,
+  },
+  {
+    label: 'ORCID',
+    href: 'https://orcid.org/0009-0008-9311-4598',
+    icon: `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c2.359 0 3.9-1.306 3.9-3.722 0-2.016-1.284-3.722-3.9-3.722h-2.297z"/></svg>`,
+  },
+];
+---
+
+<BaseLayout
+  title="HJP — Hector Puentes"
+  description="Ingeniero Electrónico, investigador y creador de contenido. Maestrante en Ingeniería y Tecnologias Espaciales en el INPE."
+>
+
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <section class="max-w-6xl mx-auto px-6 py-20 md:py-28">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+
+      <!-- Text -->
+      <div class="order-2 md:order-1">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent)] mb-4">
+          {t('hero.greeting')}
+        </p>
+
+        <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-none mb-5 tracking-tight">
+          Hector<br/>Puentes
+        </h1>
+
+        <p class="text-[var(--text-muted)] text-base md:text-lg font-light mb-5 leading-relaxed">
+          {t('hero.role')}
+        </p>
+
+        <p class="text-sm text-[var(--text-muted)] mb-6 leading-relaxed">
+          {t('hero.institution')}
+        </p>
+
+        <blockquote class="border-l-2 border-[var(--accent)] pl-4 italic text-[var(--text-muted)] text-sm mb-8">
+          {t('hero.kaizen')}
+        </blockquote>
+
+        <!-- Social icons -->
+        <div class="flex items-center gap-3 mb-8">
+          {socials.map(({ label, href, icon }) => (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              class="w-9 h-9 flex items-center justify-center rounded-lg border border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors"
+              set:html={icon}
+            />
+          ))}
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-3">
+          <a href="/assets/docs/Curriculum_Hector_Puentes.pdf" target="_blank" class="btn-primary">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            {t('hero.cta.cv')}
+          </a>
+          <a href="#contact" class="btn-outline">
+            {t('hero.cta.contact')}
+          </a>
+        </div>
+      </div>
+
+      <!-- Photo -->
+      <div class="order-1 md:order-2 flex justify-center md:justify-end">
+        <img
+          src="/assets/images/profile-picture.jpg"
+          alt="Hector Puentes"
+          class="w-64 md:w-80 h-auto rounded-2xl shadow-lg"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════ -->
+  <section class="bg-[var(--bg2)] py-20">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent)] mb-3">
+        {t('about.title')}
+      </p>
+      <h2 class="font-serif text-3xl md:text-4xl font-bold mb-8 leading-tight">
+        Ingeniero, Investigador<br/>y Aprendiz Perpetuo.
+      </h2>
+      <div class="space-y-4 text-[var(--text-muted)] leading-relaxed">
+        <p>{t('about.p1')}</p>
+        <p>{t('about.p2')}</p>
+        <p>{t('about.p3')}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SKILLS
+  ══════════════════════════════════════════ -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent)] mb-3">
+      {t('skills.title')}
+    </p>
+    <h2 class="font-serif text-3xl md:text-4xl font-bold mb-10">
+      Tecnologías & Herramientas
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <!-- Languages -->
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-4">
+          {t('skills.languages')}
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          {skills.languages.map(({ name, logo }) => (
+            <span class="flex items-center gap-2 px-3 py-1.5 bg-[var(--bg2)] border border-[var(--border)] rounded-lg text-sm font-medium hover:border-[var(--accent)] transition-colors">
+              <img src={logo} class="w-5 h-5 object-contain flex-shrink-0" alt="" loading="lazy" />
+              {name}
+            </span>
+          ))}
+        </div>
+      </div>
+      <!-- Tools -->
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-4">
+          {t('skills.tools')}
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          {skills.tools.map(({ name, logo }) => (
+            <span class="flex items-center gap-2 px-3 py-1.5 bg-[var(--bg2)] border border-[var(--border)] rounded-lg text-sm font-medium hover:border-[var(--accent)] transition-colors">
+              <img src={logo} class="w-5 h-5 object-contain flex-shrink-0" alt="" loading="lazy" />
+              {name}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════════ -->
+  <section id="contact" class="bg-[var(--bg2)] py-20">
+    <div class="max-w-2xl mx-auto px-6">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent)] mb-3">
+        {t('contact.title')}
+      </p>
+      <h2 class="font-serif text-3xl md:text-4xl font-bold mb-3">
+        {t('contact.subtitle')}
+      </h2>
+      <p class="text-[var(--text-muted)] mb-2">{t('contact.desc')}</p>
+      <p class="text-sm text-[var(--text-muted)] mb-8">
+        {t('contact.or')}
+        <a href="mailto:hectorjosepuentesruiz@gmail.com" class="text-[var(--accent)] underline underline-offset-2 ml-1">
+          hectorjosepuentesruiz@gmail.com
+        </a>
+      </p>
+
+      <!-- Form via Formspree — replace YOUR_FORM_ID -->
+      <form
+        action="https://formspree.io/f/xgorjypq"
+        method="POST"
+        class="space-y-4"
+      >
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium mb-1.5">{t('contact.name')}</label>
+            <input
+              type="text"
+              name="name"
+              required
+              class="w-full px-4 py-2.5 bg-[var(--bg)] border border-[var(--border)] rounded-lg text-sm focus:outline-none focus:border-[var(--accent)] transition-colors"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1.5">{t('contact.email')}</label>
+            <input
+              type="email"
+              name="email"
+              required
+              class="w-full px-4 py-2.5 bg-[var(--bg)] border border-[var(--border)] rounded-lg text-sm focus:outline-none focus:border-[var(--accent)] transition-colors"
+            />
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1.5">{t('contact.message')}</label>
+          <textarea
+            name="message"
+            rows={5}
+            required
+            class="w-full px-4 py-2.5 bg-[var(--bg)] border border-[var(--border)] rounded-lg text-sm focus:outline-none focus:border-[var(--accent)] transition-colors resize-none"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn-primary w-full justify-center">
+          {t('contact.send')}
+        </button>
+      </form>
+    </div>
+  </section>
+
+</BaseLayout>

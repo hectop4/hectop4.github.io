@@ -1,0 +1,99 @@
+---
+import { formatDate, useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/ui';
+import type { CollectionEntry } from 'astro:content';
+
+type AnyPost =
+  | CollectionEntry<'projects'>
+  | CollectionEntry<'events'>
+  | CollectionEntry<'thoughts'>
+  | CollectionEntry<'reviews'>;
+
+interface Props {
+  post:     AnyPost;
+  category: string;
+  lang:     Lang;
+}
+
+const { post, category, lang } = Astro.props;
+const t = useTranslations(lang);
+const { title, date, excerpt, tags, item, itemType, itemAuthor, rating, spoilers } = post.data;
+
+const typeIcon: Record<string, string> = {
+  book:   '📚',
+  movie:  '🎬',
+  series: '📺',
+};
+
+const href = `/blog/${category}/${post.slug}`;
+---
+
+<a
+  href={href}
+  class="group block bg-[var(--bg)] border border-[var(--border)] rounded-xl p-6 hover:border-[var(--accent)] hover:shadow-sm transition-all duration-200"
+>
+  <!-- Top row: category tag + badges -->
+  <div class="flex items-center justify-between mb-4">
+    <div class="flex items-center gap-2">
+      {itemType && (
+        <span class="text-base" aria-label={typeIcon[itemType]}>{typeIcon[itemType]}</span>
+      )}
+      {itemType && (
+        <span class="tag">
+          {itemType === 'book' ? t('type.book') : itemType === 'movie' ? t('type.movie') : t('type.series')}
+        </span>
+      )}
+      {category === 'reviews' && spoilers && (
+        <span class="tag flex items-center gap-1 border-amber-400/60 text-amber-600 dark:text-amber-400">
+          <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
+          </svg>
+          {t('review.spoilerBadge')}
+        </span>
+      )}
+      {category === 'reviews' && !spoilers && (
+        <span class="tag flex items-center gap-1 border-green-400/60 text-green-600 dark:text-green-400">
+          <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          {t('review.noSpoilerBadge')}
+        </span>
+      )}
+    </div>
+    <span class="tag text-[var(--text-muted)]">{post.data.lang.toUpperCase()}</span>
+  </div>
+
+  <!-- Title -->
+  <h3 class="font-serif text-lg font-semibold leading-snug mb-1 group-hover:text-[var(--accent)] transition-colors">
+    {title}
+  </h3>
+
+  <!-- Review sub-info -->
+  {item && itemAuthor && (
+    <p class="text-xs text-[var(--text-muted)] mb-2">
+      {t('post.by')} {itemAuthor}
+    </p>
+  )}
+
+  <!-- Star rating -->
+  {rating && (
+    <div class="stars flex gap-0.5 mb-3">
+      {[1,2,3,4,5].map(n => (
+        <span class={n <= rating ? 'filled text-sm' : 'text-sm'} aria-hidden="true">★</span>
+      ))}
+    </div>
+  )}
+
+  <!-- Excerpt -->
+  <p class="text-sm text-[var(--text-muted)] leading-relaxed line-clamp-3 mb-4">
+    {excerpt}
+  </p>
+
+  <!-- Footer: date + read more -->
+  <div class="flex items-center justify-between text-xs text-[var(--text-muted)]">
+    <time datetime={date.toISOString()}>{formatDate(date, lang)}</time>
+    <span class="text-[var(--accent)] font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+      {t('blog.readMore')}
+    </span>
+  </div>
+</a>

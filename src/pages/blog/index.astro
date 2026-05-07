@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CategorySection from '../../components/CategorySection.astro';
+import { getCollection } from 'astro:content';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+function latest(posts: any[]) {
+  return posts
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+    .slice(0, 3);
+}
+
+const projects = latest(await getCollection('projects'));
+const events   = latest(await getCollection('events'));
+const thoughts = latest(await getCollection('thoughts'));
+const reviews  = latest(await getCollection('reviews'));
+---
+
+<BaseLayout
+  title={`Blog — HJP`}
+  description={t('blog.subtitle')}
+>
+  <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+
+    <!-- Page header -->
+    <div class="mb-12">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent)] mb-3">
+        HJP
+      </p>
+      <h1 class="font-serif text-4xl md:text-5xl font-bold mb-3">
+        {t('blog.title')}
+      </h1>
+      <p class="text-[var(--text-muted)]">{t('blog.subtitle')}</p>
+    </div>
+
+    <!-- Categories -->
+    <CategorySection category="projects" titleKey="cat.projects" descKey="cat.projects.desc" posts={projects} lang={lang} />
+    <CategorySection category="events"   titleKey="cat.events"   descKey="cat.events.desc"   posts={events}   lang={lang} />
+    <CategorySection category="thoughts" titleKey="cat.thoughts" descKey="cat.thoughts.desc" posts={thoughts} lang={lang} />
+    <CategorySection category="reviews"  titleKey="cat.reviews"  descKey="cat.reviews.desc"  posts={reviews}  lang={lang} />
+
+  </div>
+</BaseLayout>
