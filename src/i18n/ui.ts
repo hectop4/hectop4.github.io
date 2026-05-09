@@ -1,7 +1,6 @@
 export const languages = {
   es: "Español",
   en: "English",
-  pt: "Português",
 } as const;
 
 export type Lang = keyof typeof languages;
@@ -52,6 +51,7 @@ export const ui = {
     "cat.reviews.desc": "Libros, series y películas que me marcaron",
     // Post
     "post.back": "← Volver al blog",
+    "post.writtenBy": "Escrito por",
     "post.postedOn": "Publicado el",
     "post.readingTime": "min de lectura",
     "post.tags": "Etiquetas",
@@ -78,6 +78,11 @@ export const ui = {
     // Footer
     "footer.rights": "Todos los derechos reservados",
     "footer.made": "Hecho con dedicación",
+    // 404
+    "404.code": "404",
+    "404.title": "Página no encontrada",
+    "404.desc": "La página que buscas no existe o fue movida.",
+    "404.back": "Volver al inicio",
   },
   en: {
     // Nav
@@ -122,6 +127,7 @@ export const ui = {
     "cat.reviews.desc": "Books, series and movies that marked me",
     // Post
     "post.back": "← Back to blog",
+    "post.writtenBy": "Written by",
     "post.postedOn": "Posted on",
     "post.readingTime": "min read",
     "post.tags": "Tags",
@@ -147,76 +153,11 @@ export const ui = {
     // Footer
     "footer.rights": "All rights reserved",
     "footer.made": "Made with dedication",
-  },
-  pt: {
-    // Nav
-    "nav.home": "Início",
-    "nav.blog": "Blog",
-    "nav.contact": "Contato",
-    "nav.cv": "Currículo",
-    // Hero
-    "hero.greeting": "Olá, sou",
-    "hero.role": "Engenheiro Eletrônico · Pesquisador · Criador de Conteúdo",
-    "hero.institution":
-      "Mestrando em Engenharia e Tecnologia Espacial no INPE (Brasil) e pesquisador na UPTC (Colômbia)",
-    "hero.kaizen": '"Melhorando um pouco a cada dia"',
-    "hero.cta.cv": "Ver Currículo",
-    "hero.cta.contact": "Entre em contato",
-    // About
-    "about.title": "Sobre mim",
-    "about.p1":
-      "Sou Hector Puentes, engenheiro eletrônico formado pela Universidad Pedagógica y Tecnológica de Colombia (UPTC), atualmente mestrando em Engenharia Espacial e Tecnologias Associadas no Instituto Nacional de Pesquisas Espaciais (INPE) do Brasil, enquanto desenvolvo meu projeto de pesquisa na Colômbia.",
-    "about.p2":
-      "Sou apaixonado por exploração espacial, robótica e inteligência artificial. Acredito fortemente na educação e o melhor regalo que se pode dar para os outros e para si mesmo, por isso gravo vídeos sobre engenharia, leitura e aprendizado no meu canal do YouTube.",
-    "about.p3":
-      "Estou sempre em busca de novos desafios que testem meus conhecimentos e habilidades para crescer como engenheiro, pesquisador e pessoa.",
-    // Skills
-    "skills.title": "Habilidades",
-    "skills.languages": "Linguagens",
-    "skills.tools": "Ferramentas",
-    // Blog
-    "blog.title": "Blog",
-    "blog.subtitle": "Projetos, eventos, pensamentos e resenhas",
-    "blog.viewAll": "Ver todos",
-    "blog.readMore": "Ler mais →",
-    "blog.empty": "Em breve...",
-    // Categories
-    "cat.projects": "Projetos",
-    "cat.projects.desc":
-      "Desenvolvimento de hardware, software e sistemas embarcados",
-    "cat.events": "Eventos",
-    "cat.events.desc": "Conferências, hackathons e competições",
-    "cat.thoughts": "Pensamentos",
-    "cat.thoughts.desc": "Reflexões sobre engenharia, aprendizado e vida",
-    "cat.reviews": "Resenhas",
-    "cat.reviews.desc": "Livros, séries e filmes que me marcaram",
-    // Post
-    "post.back": "← Voltar ao blog",
-    "post.postedOn": "Publicado em",
-    "post.readingTime": "min de leitura",
-    "post.tags": "Tags",
-    "post.by": "por",
-    "post.rating": "Avaliação",
-    // Item types
-    "type.book": "Livro",
-    "type.movie": "Filme",
-    "type.series": "Série",
-    "review.spoilerBadge": "Spoilers",
-    "review.spoilerWarning": "Este artigo pode conter spoilers do enredo.",
-    "review.noSpoilerBadge": "Sem spoilers",
-    // Contact
-    "contact.title": "Contato",
-    "contact.subtitle": "Vamos conversar",
-    "contact.desc":
-      "Tem um projeto, uma ideia ou simplesmente quer conversar? Escreva para mim.",
-    "contact.name": "Nome",
-    "contact.email": "Email",
-    "contact.message": "Mensagem",
-    "contact.send": "Enviar mensagem",
-    "contact.or": "ou escreva diretamente para",
-    // Footer
-    "footer.rights": "Todos os direitos reservados",
-    "footer.made": "Feito com dedicação",
+    // 404
+    "404.code": "404",
+    "404.title": "Page not found",
+    "404.desc": "The page you're looking for doesn't exist or has been moved.",
+    "404.back": "Back to home",
   },
 } as const;
 

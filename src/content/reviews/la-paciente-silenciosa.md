@@ -7,14 +7,14 @@ tags: ["thriller", "psicológico", "ficción", "misterio"]
 item: "La Paciente Silenciosa"
 itemType: book
 itemAuthor: "Alex Michaelides"
-rating: 5
-spoilers: true
+rating: 4.2
+spoilers: false
 ---
 
-<div class="callout callout--warning">
+<!-- <div class="callout callout--warning">
   <span class="callout__icon">⚠️</span>
   <span><strong>Advertencia de spoilers:</strong> Este blog puede revelar detalles importantes de la trama. Lee bajo tu propia responsabilidad.</span>
-</div>
+</div> -->
 <div class="prose-media-header">
   <div class="prose-media-header__cover">
 
@@ -36,10 +36,10 @@ Pronto descubre que el mutismo de la paciente está mucho más enraizado de lo q
 
 ## Historia
 
-<div class="callout callout--safe">
+<!-- <div class="callout callout--safe">
   <span class="callout__icon">✅</span>
   <span><strong>Sin spoilers:</strong> Esta sección aún no revela detalles importantes de la trama.</span>
-</div>
+</div> -->
 
 ### Narracion
 
@@ -48,18 +48,26 @@ La perspectiva de Theo y Alicia se intercalan a lo largo de la novela, haciendo 
 
 Cada capítulo explica la persectiva de Theo o de Alicia, mas nunca ambos en el mismo capitulo, aislando ambas historias hasta el final.
 
-<div class="callout callout--danger">
+<!-- <div class="callout callout--danger">
   <span class="callout__icon">⚠️</span>
   <span><strong>Spoilers a partir de aquí:</strong> Las siguientes secciones revelan detalles importantes de la trama.</span>
-</div>
+</div> -->
 
 ## Trama
 
-La historia de Theo es contada en primera persona, de modo que el nos narra su perspectiva de los hechos, nos cuenta los detalles de su infancia como estos lo llevaron a interesarse en la psicologia,
+### Informacion General
 
-## ¿Lo recomiendo?
+La historia de Theo es contada en primera persona, de modo que el nos narra su perspectiva de los hechos, nos cuenta los detalles de su infancia como estos lo llevaron a interesarse en la psicologia, nos cuenta su historia con Ruth, su antigua psicologa, y como ella ayudo a que tuviera su interes en la psicologia.
 
-Sin dudarlo. Si te gustan los thrillers psicológicos bien construidos y no te importa perder el sueño por terminar un libro, este es para ti.
+Tambien leemos el inicio de la historia de Alicia, que es contada en su diaro, dias antes del crimen. Ella narra como Gabriel le dio ese diario, y como ella se siente feliz con su matrimonio, aunque a veces se siente un poco sola.
 
-> _"La locura es como la gravedad: solo necesitas un pequeño empujón."_
-> — Alex Michaelides, La Paciente Silenciosa
+A medida que avanza la historia, descubrimos secretos del pasado de Alicia, como de Theo, lo que nos lleva a entender mejor las motivaciones de ambos personajes.
+
+Y vemos como las personas "cercanas" a Alicia, como su mejor amigo, el hermano de su marido, y su propio marido, tienen sus propios secretos y motivaciones que afectan la historia.
+
+## Mi opinion
+
+La paciente silenciosa es un libro corto, y sencillo de leer, pero con una trama enganchante que te mantiene pegado hasta el final. El plot twist me obligo a leer el libro una segunda vez para comprender completamente la historia.
+Aun asi debo decir que el plot twist me parecio antinatural hasta cierto punto, aun asi eso no impidio que me gustara el libro, y que disfrutara de haberlo leido.
+
+Es una novela que recomendaria para cualquier persona que le guste el thriller y quiera disfrutar de una historia corta pero muy llamativa.

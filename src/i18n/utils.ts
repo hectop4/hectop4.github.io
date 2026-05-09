@@ -21,7 +21,6 @@ export function formatDate(date: Date, lang: Lang): string {
   const localeMap: Record<Lang, string> = {
     es: 'es-CO',
     en: 'en-US',
-    pt: 'pt-BR',
   };
   return date.toLocaleDateString(localeMap[lang], {
     year: 'numeric',

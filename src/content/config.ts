@@ -4,7 +4,7 @@ const postSchema = z.object({
   title:       z.string(),
   date:        z.coerce.date(),
   excerpt:     z.string(),
-  lang:        z.enum(['es', 'en', 'pt']),
+  lang:        z.enum(['es', 'en']),
   tags:        z.array(z.string()).optional().default([]),
   coverImage:  z.string().optional(),
   // Only for reviews

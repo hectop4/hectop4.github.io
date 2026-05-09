@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getLangFromUrl, useTranslations, getLocalePath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<BaseLayout title={`${t('404.code')} — ${t('404.title')}`}>
+  <section class="flex flex-col items-center justify-center text-center px-6 py-32 gap-6">
+    <p class="text-8xl font-bold text-[var(--accent)] font-serif leading-none">
+      {t('404.code')}
+    </p>
+    <h1 class="text-3xl font-bold text-[var(--text)]">
+      {t('404.title')}
+    </h1>
+    <p class="text-[var(--text-muted)] max-w-sm">
+      {t('404.desc')}
+    </p>
+    <a
+      href={getLocalePath(lang)}
+      class="mt-4 inline-block px-6 py-3 rounded-xl bg-[var(--accent)] text-white font-medium hover:opacity-90 transition-opacity"
+    >
+      {t('404.back')}
+    </a>
+  </section>
+</BaseLayout>
